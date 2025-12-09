@@ -14,25 +14,27 @@ let displayInfo = (Axe, section, objet) => {
     return;
   }
 
-  console.log("=== TITRE DE L'AXE ===");
-  console.log(axeData.titre);
+  // console.log("=== TITRE DE L'AXE ===");
+  // console.log(axeData.titre);
 
   // Si la section existe dans cet axe
   if (axeData.sections && axeData.sections[section]) {
     const sectionData = axeData.sections[section];
 
-    console.log("\n=== TITRE DE LA SECTION ===");
-    console.log(sectionData.titre);
+    // console.log("\n=== TITRE DE LA SECTION ===");
+    // console.log(sectionData.titre);
 
     // Si l'objet existe dans cette section
     if (sectionData.contenu && sectionData.contenu[objet]) {
       const objetData = sectionData.contenu[objet];
 
-      console.log("\n=== CONTENU DE L'OBJET ===");
-      console.log("Titre:", objetData.titre);
-      console.log("Descriptif:", objetData.descriptif);
-      console.log("Descriptif:", objetData.qualification);
-      console.log("Descriptif:", objetData.procedure);
+      // console.log("\n=== CONTENU DE L'OBJET ===");
+      // console.log("Titre:", objetData.titre);
+      // console.log("Descriptif:", objetData.descriptif);
+      // console.log("Descriptif:", objetData.qualification);
+      // console.log("Descriptif:", objetData.procedure);
+      return [axeData, sectionData, objetData];
+
     } else {
       console.log(`Erreur: Objet "${objet}" non trouvé dans la section`);
     }
@@ -40,6 +42,3 @@ let displayInfo = (Axe, section, objet) => {
     console.log(`Erreur: Section "${section}" non trouvée`);
   }
 };
-
-// Appel de la fonction
-displayInfo("Axe_I", "_2", "a");
